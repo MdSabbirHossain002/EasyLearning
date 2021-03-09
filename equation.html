@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<title>Equadratic Equation</title>
+<style>
+.input_part{
+				background : black;
+				color:#fff;
+				justify-content:center ;
+}
+.input_part input{
+				background :black;
+				color:#dec000;
+				ouline:0;
+				border-bottom: 1px solid red;
+				border-radius: 10px;
+				margin:10px;
+				border: 1px solid red;
+				
+}
+.input_part input:focus{
+				outline:none;
+				border:1px solid green;
+}
+.input_part button {
+				width:100%;
+				background:#ff55dd;
+				color:#12ff00;
+				border: 3px solid red;
+				border-radius: 15px;
+}
+
+
+.part2 h4{
+				
+				color:#c5c5c5
+}
+.part2 p{
+				color: red;
+				background :pink;
+				border-radius: 8px;
+				
+}
+</style>
+</head>
+<body>
+<div class="input_part">
+				<h3 style="color:green;">Quadratic Equation<br>[ax<sup>2</sup>+ bx + c]</h3>
+				<input type="number" id="valuea" placeholder="type the value of a">
+				<input type="number" id="valueb" placeholder="type the value of b">
+				<input type="number" id="valuec" placeholder="type the value of c">
+				<br>
+				<button id="btn" onclick="func()">Submit</button>
+</div>
+<div class="part2">
+				<h4>Quadratic Equation / 2 degree equation solver. made by Md Sabbir Hossain</h4>
+				<p id="x1"> Value of x1 will show here.</p>
+				<p id="x2">Value of x2 will show here.</p>
+</div>
+				
+				
+				
+				
+				<script>
+				 function func(){
+								var a = document.getElementById('valuea').value ;
+								var b = document.getElementById('valueb').value;
+								var c = document.getElementById('valuec').value;
+								
+								var root = Math.sqrt(b*b - 4*a*c);
+								var d = 2*a ;
+								var x1 = (-b + root) / d;
+								var x2 = (-b - root) / d
+								 document.getElementById('x1').innerHTML = "value of x1: " + x1;
+								document.getElementById('x2').innerHTML = "value of x2: " + x2;
+								
+	
+			
+	}
+				</script>
+</body>
+</html>
